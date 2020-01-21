@@ -1,0 +1,5 @@
+package br.org.generation.backendProdutos.security;
+
+public class Token {
+
+}
