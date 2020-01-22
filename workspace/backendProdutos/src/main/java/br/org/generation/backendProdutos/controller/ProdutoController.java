@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @CrossOrigin("*")
 public class ProdutoController {
 	
-	@GetMapping("/aluno/todos")
+	@GetMapping("/produto/todos")
 	public ResponseEntity<ArrayList<Produto>> getAllProdutos(@RequestParam String token) {
 		if (Autenticator.isValid(token)) {
 			/* simulando uma consulta ao banco de dados */
@@ -24,7 +24,7 @@ public class ProdutoController {
 			for (int i=0; i<20;i++) {
 				Produto p = new Produto();
 				p.setCodigo(i+1);
-				p.setTitulo("Titulo: "+(i+1));
+				p.setTitulo("Produto "+(i+1));
 				p.setDetalhes("Detalhes do produto ");
 				p.setPreco((i+1)*20);
 				

@@ -15,6 +15,7 @@ public class Autenticator {
 		return token;
 	}
 	
+	// validando o token
 	public static boolean isValid(String token) {
 		byte[] vetor = DatatypeConverter.parseHexBinary(token);
 		String novaString = new String(vetor);
